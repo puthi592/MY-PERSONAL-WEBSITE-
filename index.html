@@ -265,20 +265,15 @@
   .avatar {
     height: 200px;
     border-radius: 15px;
-    background: radial-gradient(circle, #63f5e633, transparent 50%),
-                linear-gradient(135deg, #25264c, #152b3c, #372346);
-    display: grid;
-    place-items: center;
     overflow: hidden;
+    border: 1px solid #ffffff20;
   }
 
-  .pixel {
-    width: 95px;
-    height: 95px;
-    background: linear-gradient(135deg, var(--cyan), var(--purple));
-    transform: rotate(45deg);
-    border-radius: 20px;
-    box-shadow: 0 0 60px #63f5e655;
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
   }
 
   .profile h3 { margin-top: 17px; }
@@ -329,8 +324,15 @@
     gap: 16px;
   }
 
+  .project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
   .project {
     padding: 22px;
+    height: 100%;
     transition: .3s;
   }
 
@@ -425,10 +427,9 @@
     <header class="hero">
       <div>
         <div class="tag">✦ Born to know about technology</div>
-        <h1>Creating my<br>own <span class="gradient">universe.</span></h1>
+        <h1>CHEA<br> <span class="gradient">PUTHI.</span></h1>
         <p class="description">
-          A curious creator exploring technology, AI, and digital design.
-          Learning every day and turning crazy ideas into real projects.
+         A kid that walk on the technology way 
         </p>
 
         <div class="buttons">
@@ -441,19 +442,22 @@
         <div class="orbit"></div>
         <div class="orbit-2"></div>
         <div class="profile">
-          <div class="avatar"><div class="pixel"></div></div>
+          <!-- Profile Image Section -->
+          <div class="avatar">
+            <img src="profile.jpg" alt="Puthi Pixel Art">
+          </div>
           <h3>👾 Puthi</h3>
-          <p>Developer in progress · Cambodia 🇰🇭</p>
+          <p>Camboia kid</p>
         </div>
       </div>
     </header>
 
     <section class="content reveal" id="about">
       <div class="tag">01 / About me</div>
-      <h2 class="section-title">My information <span class="gradient">Here.</span></h2>
+      <h2 class="section-title">My information <span class="gradient">Is Here.</span></h2>
 
       <div class="glass about">
-        Halo my name's CHEA PUTHI and you can call me Dexer or Patrick that my nick name nowaday im study at TEPRINOM High schooll grade 11(IT-YEAR-2) am the one who like learning about technology,Space,History explore how machin work 
+        Halo my name's CHEA PUTHI and you can call me Dexer or Patrick that my nick name nowaday im study at TEPRINOM High schooll grade 11(IT-YEAR-2) am the one who like learning about technology,Space,History explore how machin work and love being alone more than in any friend group  
 
         <div class="skills">
           <span>Technology</span>
@@ -471,18 +475,25 @@
       <h2 class="section-title">Featured <span class="gradient">projects.</span></h2>
 
       <div class="projects">
-        <article class="glass project">
-          <div class="project-icon">🤖</div>
-          <h3>Puthi AI</h3>
-          <p>My own AI assistant project for chatting, learning, and exploring creative ideas.</p>
-        </article>
+        <!-- Project 1: Puthi AI Link -->
+        <a href="https://puthi-io-6o46.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+          <article class="glass project">
+            <div class="project-icon">🤖</div>
+            <h3>Puthi AI ↗</h3>
+            <p>My own AI assistant project for chatting, learning, and exploring creative ideas.</p>
+          </article>
+        </a>
 
-        <article class="glass project">
-          <div class="project-icon">🌌</div>
-          <h3>My Portfolio</h3>
-          <p>A futuristic personal website with glass effects, neon colors, and smooth animations.</p>
-        </article>
+        <!-- Project 2: Aura QR Code Generator Link -->
+        <a href="https://aura-qr-code-generator.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+          <article class="glass project">
+            <div class="project-icon">🎨</div>
+            <h3>Aura QR Code ↗</h3>
+            <p>A modern futuristic QR code generator built for generating high-quality custom QR codes.</p>
+          </article>
+        </a>
 
+        <!-- Project 3: Coming Soon -->
         <article class="glass project">
           <div class="project-icon">🚀</div>
           <h3>Coming Soon</h3>
@@ -565,7 +576,6 @@
     for (let i = 0; i < drops.length; i++) {
       const drop = drops[i];
       
-      // Gradient line to give a glowing digital-rain trail look
       const grad = ctx.createLinearGradient(drop.x, drop.y, drop.x, drop.y + drop.length);
       grad.addColorStop(0, `rgba(99, 245, 230, ${drop.opacity})`);
       grad.addColorStop(1, `rgba(167, 139, 250, 0)`);
@@ -602,4 +612,4 @@
   </script>
 
   </body>
-  </html> 
+  </html>
