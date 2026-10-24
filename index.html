@@ -18,7 +18,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none !important; /* Custom sci-fi cursor */
   }
 
   html { scroll-behavior: smooth; }
@@ -33,6 +32,7 @@
     min-height: 100vh;
     overflow-x: hidden;
     position: relative;
+    cursor: none;
   }
 
   /* Rain Canvas Styling */
@@ -56,7 +56,7 @@
     border: 2px solid var(--cyan);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none;
+    pointer-events: none !important;
     z-index: 9999;
     transition: width 0.2s, height 0.2s, background-color 0.2s;
     box-shadow: 0 0 10px var(--cyan);
@@ -71,7 +71,7 @@
     background: var(--pink);
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    pointer-events: none;
+    pointer-events: none !important;
     z-index: 10000;
   }
 
@@ -173,6 +173,7 @@
     text-decoration: none;
     background: #ffffff08;
     transition: .25s;
+    cursor: none;
   }
 
   .btn.primary {
@@ -194,7 +195,6 @@
     position: relative;
   }
 
-  /* Solar System Orbits Enhancement */
   .orbit {
     position: absolute;
     width: 320px;
@@ -324,7 +324,7 @@
     gap: 16px;
   }
 
-  .project-link {
+  .project-card-link {
     text-decoration: none;
     color: inherit;
     display: block;
@@ -429,7 +429,7 @@
         <div class="tag">✦ Born to know about technology</div>
         <h1>CHEA<br> <span class="gradient">PUTHI.</span></h1>
         <p class="description">
-         A kid that walk on the technology way 
+        A KID THAT JUST WALK ON THE TECHNOLOGY WAY
         </p>
 
         <div class="buttons">
@@ -442,12 +442,11 @@
         <div class="orbit"></div>
         <div class="orbit-2"></div>
         <div class="profile">
-          <!-- Profile Image Section -->
           <div class="avatar">
             <img src="profile.jpg" alt="Puthi Pixel Art">
           </div>
           <h3>👾 Puthi</h3>
-          <p>Camboia kid</p>
+          <p>Cambodia kid </p>
         </div>
       </div>
     </header>
@@ -457,7 +456,7 @@
       <h2 class="section-title">My information <span class="gradient">Is Here.</span></h2>
 
       <div class="glass about">
-        Halo my name's CHEA PUTHI and you can call me Dexer or Patrick that my nick name nowaday im study at TEPRINOM High schooll grade 11(IT-YEAR-2) am the one who like learning about technology,Space,History explore how machin work and love being alone more than in any friend group  
+        Halo my name's CHEA PUTHI and you can call me Dexer or Patrick that my nick name nowaday im study at TEPRINOM High schooll grade 11(IT-YEAR-2) am the one who like learning about technology,Space,History explore how machin work loving being alone more than in the chaos 
 
         <div class="skills">
           <span>Technology</span>
@@ -475,8 +474,8 @@
       <h2 class="section-title">Featured <span class="gradient">projects.</span></h2>
 
       <div class="projects">
-        <!-- Project 1: Puthi AI Link -->
-        <a href="https://puthi-io-6o46.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+        <!-- Project 1: Puthi AI -->
+        <a href="https://puthi-io-6o46.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card-link">
           <article class="glass project">
             <div class="project-icon">🤖</div>
             <h3>Puthi AI ↗</h3>
@@ -484,21 +483,23 @@
           </article>
         </a>
 
-        <!-- Project 2: Aura QR Code Generator Link -->
-        <a href="https://aura-qr-code-generator.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+        <!-- Project 2: Aura QR Code Generator -->
+        <a href="https://aura-qr-code-generator.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-card-link">
           <article class="glass project">
-            <div class="project-icon">🎨</div>
+            <div class="project-icon">📷</div>
             <h3>Aura QR Code ↗</h3>
             <p>A modern futuristic QR code generator built for generating high-quality custom QR codes.</p>
           </article>
         </a>
 
-        <!-- Project 3: Coming Soon -->
-        <article class="glass project">
-          <div class="project-icon">🚀</div>
-          <h3>Coming Soon</h3>
-          <p>A space for my next experiment. Something new is always being built.</p>
-        </article>
+        <!-- Project 3: MP3 Converter -->
+        <a href="PUT_YOUR_MP3_CONVERTER_LINK_HERE" target="_blank" rel="noopener noreferrer" class="project-card-link">
+          <article class="glass project">
+            <div class="project-icon">🎵</div>
+            <h3>MP3 Converter ↗</h3>
+            <p>A web tool designed to convert and download your favorite media into MP3 format effortlessly.</p>
+          </article>
+        </a>
       </div>
     </section>
 
@@ -519,7 +520,6 @@
   <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Custom Cursor Movement
   const cursor = document.getElementById("cursor");
   const cursorDot = document.getElementById("cursorDot");
 
@@ -530,7 +530,6 @@
     cursorDot.style.top = `${e.clientY}px`;
   });
 
-  // Expand cursor on interactive elements
   const interactiveElements = document.querySelectorAll("a, button, .project, .btn");
   interactiveElements.forEach(el => {
     el.addEventListener("mouseenter", () => {
@@ -545,7 +544,6 @@
     });
   });
 
-  // Technology Sci-Fi Rain Animation
   const canvas = document.getElementById("rainCanvas");
   const ctx = canvas.getContext("2d");
 
@@ -596,7 +594,6 @@
   }
   animateRain();
 
-  // Scroll Reveal Observer
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
